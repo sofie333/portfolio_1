@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
+@layer base {
+  @font-face {
+    font-family: "oswald";
+    src: url("/public/fonts/Oswald-VariableFont_wght.woff2");
+    font-style: normal;
+  }
 
+  @font-face {
+    font-family: "mont";
+    src: url("/public/fonts/Montserrat-VariableFont_wght.woff2");
+    font-style: normal;
+  }
+
+  p {
+    font-family: mont;
+  }
 }

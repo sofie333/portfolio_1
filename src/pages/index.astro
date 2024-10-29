@@ -1,15 +1,152 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
-import { Image } from 'astro:assets';
-import thumbsup from "../assets/images/thumbsup.png";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import selfportrait from "../images/img_me.webp";
 ---
+
 <MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+  <section class="">
+    <div class="lg:fixed inset-y-0 left-10 pt-2" id="img">
+      <h1
+        class="text-header font-oswald text-white font-semibold z-40 absolute left-9 top-10"
+      >
+        So<span class="text-black">fie Anderss</span>on
+      </h1>
+      <Image
+        class="w-9/12"
+        src={selfportrait}
+        alt="Selvportræt af Sofie Andersson"
+      />
+      <div class="grid grid-cols-3 pr-20">
+        <div class="flex flex-row">
+          <p class="font-semibold text-white">Linkedin</p>
+        </div>
+        <div class="flex flex-row">
+          <p class="font-semibold text-white">E-mail</p>
+        </div>
+        <div class="flex flex-row">
+          <p class="tlf font-semibold text-white"><span>Telefonnr.</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="" id="text">
+      <div class="bg-gron rounded-lg py-7 px-10 mb-8">
+        <h2 class="font-oswald text-4xl font-semibold pb-4">Kort om mig</h2>
+        <p class="text-base leading-8 pb-4">
+          Mit navn er Sofie, jeg er 25 år og bosat på Nørrebro. Til daglig
+          studerer jeg Multimediedesign på KEA. Jeg er engageret og dedikeret
+          efter at skabe bæredygtige digitale designs der bidrager til en god
+          brugeroplevelse og som er brugervenligt. Om jeg arbejder selvstændigt
+          eller i en gruppe, tilpasser jeg mig nemt og er altid klar på nye
+          udfordringer.
+        </p>
+        <p class="text-base leading-8">
+          Jeg har interesse for<span class="interesser font-semibold"></span>
+        </p>
+      </div>
+      <div class="bg-gron rounded-lg py-7 px-10 mb-8">
+        <h2 class="font-oswald text-4xl font-semibold pb-4">
+          Jeg vil gerne arbejde med...
+        </h2>
+        <p class="text-base leading-8">
+          Jeg er åben for alt, der involverer multimediedesign, men jeg er især
+          interesseret i at arbejde med UX/UI design, grafisk design og at være
+          med i processen fra idé til færdigt produkt. Det er områder, hvor jeg
+          ønsker at udvikle mine kompetencer, så jeg på sigt kan mestre dem.
+        </p>
+      </div>
+      <div class="bg-gron rounded-lg py-7 px-10 mb-8">
+        <h2 class="font-oswald text-4xl font-semibold pb-8 px-10">Projekter</h2>
+
+        <div class="px-10">
+          <div>
+            <h3 class="font-oswald text-2xl font-semibold pb-4">
+              I Tråd Med Verden - 2024
+            </h3>
+            <p class="text-base leading-8 pb-4">
+              Dette projekt handlede om at udvikle en webfeature og indhold til
+              sociale medier for I Tråd Med Verden. Her lød opgaven på at skabe
+              og øge engagement og konvertering af private donerer og/eller
+              virksomheder. Målgruppen var kvinder i alderen 25-45 år, bosat i
+              Københavnsområdet, som værdsætter tekstilbæredygtighed, social
+              bæredygtighed og en succeshistorie.
+            </p>
+            <p class="text-base leading-8">
+              I denne opgave bidrog jeg til kodning af webfeaturen, produktion
+              af hero video, lavede ikoner i Illustrator, samt udvikling af
+              designet for webfeaturen.
+            </p>
+          </div>
+          <div class="py-7">
+            <video autoplay loop muted id="desktopVideo">
+              <source
+                src="https://saaa.dk/kea/itmv_video.mp4"
+                class="absolute w-full h-full object-cover"
+                type=""
+              />
+            </video>
+          </div>
+        </div>
+        <div class="px-10">
+          <h3 class="font-oswald text-2xl font-semibold pb-4">
+            Animation - 2023
+          </h3>
+          <p class="text-base leading-8 pb-4">
+            Til dette projekt skulle vi udvikle vores eget spil. Her fandt vi på
+            vores egen idé til vores spil, lavede alt grafikken til spillet og
+            kodede det.
+          </p>
+          <p class="text-base leading-8 pb-4">
+            Jeg har til denne opgave brugt Adobe Illustrator til at lave
+            grafikken i spillet, f.eks. baggrunde, spilelementer, karakter m.m.
+            Til at kode spillet har jeg brugt Javascript i VS Code.
+          </p>
+          <div class="py-7">
+            <video autoplay loop muted id="desktopVideo">
+              <source
+                src="https://saaa.dk/kea/spil_video.mp4"
+                class="absolute w-full h-full object-cover"
+                type=""
+              />
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <style>
+    .interesser:before {
+      content: "UX/UI";
+      animation: animate infinite 8s;
+      padding-left: 5px;
+    }
+
+    @keyframes animate {
+      10% {
+        content: "bæredygtigt design";
+      }
+      20% {
+        content: "idéudvikling";
+      }
+      40% {
+        content: "grafisk design";
+      }
+      60% {
+        content: "Illustrator";
+      }
+      80% {
+        content: "Figma";
+      }
+    }
+
+    .tlf:hover span {
+      display: none;
+    }
+
+    .tlf:hover:before {
+      content: "+45 24 96 27 80";
+    }
+  </style>
 </MainLayout>
