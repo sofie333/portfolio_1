@@ -4,30 +4,40 @@ import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import selfportrait from "../images/img_me.webp";
+import toolbox from "../images/toolbox.svg";
 ---
 
 <MainLayout title="Titel">
   <section class="">
     <div class="lg:fixed inset-y-0 left-10 pt-2" id="img">
       <h1
-        class="text-header font-oswald text-white font-semibold z-40 absolute left-9 top-10"
+        class="text-7xl font-oswald text-white font-semibold z-40 absolute left-9 top-10 lg:text-header"
       >
-        So<span class="text-black">fie Anderss</span>on
+        So<span class="lg:text-black">fie Anderss</span>on
       </h1>
       <Image
-        class="w-9/12"
+        class="lg:w-9/12"
         src={selfportrait}
         alt="Selvportræt af Sofie Andersson"
       />
-      <div class="grid grid-cols-3 pr-20">
+      <div class="grid grid-cols-3 pr-20 md:text-center">
         <div class="flex flex-row">
-          <p class="font-semibold text-white">Linkedin</p>
+          <Link
+            class=""
+            href="https://www.linkedin.com/in/sofie-andersson-715454233/"
+            >Linkedin</Link
+          >
         </div>
         <div class="flex flex-row">
-          <p class="font-semibold text-white">E-mail</p>
+          <Link
+            class="font-semibold text-white"
+            href="mailto:sofiesofieandersson@gmail.com">E-mail</Link
+          >
         </div>
         <div class="flex flex-row">
-          <p class="tlf font-semibold text-white"><span>Telefonnr.</span></p>
+          <p class="tlf font-semibold text-white hover:cursor-pointer">
+            <span>Telefonnr.</span>
+          </p>
         </div>
       </div>
     </div>
@@ -114,6 +124,28 @@ import selfportrait from "../images/img_me.webp";
           </div>
         </div>
       </div>
+      <div class="bg-gron rounded-lg py-7 px-10 mb-8">
+        <h2 class="font-oswald text-4xl font-semibold pb-4">
+          Min værktøjskasse
+        </h2>
+        <div class="px-4 lg:grid grid-cols-2">
+          <div class="flex flex-row">
+            <ul class="text-base font-mont leading-8 pb-4 list-disc">
+              <li>Figma</li>
+              <li>Adobe Illustrator</li>
+              <li>Adobe Photoshop</li>
+              <li>VS Code</li>
+            </ul>
+          </div>
+          <div class="flex flex-row">
+            <Image
+              class="w-9/12"
+              src={toolbox}
+              alt="Tegning af en værktøjskasse"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   <style>
@@ -147,6 +179,7 @@ import selfportrait from "../images/img_me.webp";
 
     .tlf:hover:before {
       content: "+45 24 96 27 80";
+      cursor: pointer;
     }
   </style>
 </MainLayout>
