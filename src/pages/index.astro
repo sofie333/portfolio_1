@@ -20,15 +20,15 @@ import toolbox from "../images/toolbox.svg";
         src={selfportrait}
         alt="Selvportræt af Sofie Andersson"
       />
-      <div class="grid grid-cols-3 pr-20 md:text-center">
-        <div class="flex flex-row">
+      <div class="grid grid-cols-3 pb-4 lg:pr-20 lg:pb-0">
+        <div class="flex flex-row hover:underline">
           <Link
             class=""
             href="https://www.linkedin.com/in/sofie-andersson-715454233/"
             >Linkedin</Link
           >
         </div>
-        <div class="flex flex-row">
+        <div class="flex flex-row hover:underline">
           <Link
             class="font-semibold text-white"
             href="mailto:sofiesofieandersson@gmail.com">E-mail</Link
@@ -41,7 +41,7 @@ import toolbox from "../images/toolbox.svg";
         </div>
       </div>
     </div>
-    <div class="" id="text">
+    <div class="pr-6 lg:pr-0" id="text">
       <div class="bg-gron rounded-lg py-7 px-10 mb-8">
         <h2 class="font-oswald text-4xl font-semibold pb-4">Kort om mig</h2>
         <p class="text-base leading-8 pb-4">
@@ -56,37 +56,47 @@ import toolbox from "../images/toolbox.svg";
           Jeg har interesse for<span class="interesser font-semibold"></span>
         </p>
       </div>
-      <div class="bg-gron rounded-lg py-7 px-10 mb-8">
-        <h2 class="font-oswald text-4xl font-semibold pb-4">
-          Jeg vil gerne arbejde med...
-        </h2>
-        <p class="text-base leading-8">
-          Jeg er åben for alt, der involverer multimediedesign, men jeg er især
-          interesseret i at arbejde med UX/UI design, grafisk design og at være
-          med i processen fra idé til færdigt produkt. Det er områder, hvor jeg
-          ønsker at udvikle mine kompetencer, så jeg på sigt kan mestre dem.
-        </p>
-      </div>
-      <div class="bg-gron rounded-lg py-7 px-10 mb-8">
-        <h2 class="font-oswald text-4xl font-semibold pb-8 px-10">Projekter</h2>
 
-        <div class="px-10">
+      <div class="bg-gron rounded-lg py-7 px-10 mb-8">
+        <h2 class="font-oswald text-4xl font-semibold pb-8">Projekter</h2>
+        <div class="">
+          <h3 class="font-oswald text-2xl font-semibold pb-4">
+            #SingleUseSucks - 2024
+          </h3>
+          <p class="text-base leading-8 pb-4">
+            Dette projekt gik ud på at lave en kampagneløsning for Plastic
+            Change i form af scrollytelling, som skulle skabe opmærksomhed på
+            problemet med engangsplast og få brugerne til at konvertere.
+          </p>
+          <p class="text-base leading-8 pb-4">
+            Jeg har til dette projekt bidraget til udviklingen af designet,
+            prototyping, lavet datavisualisering og kodning af scrollytelling.
+          </p>
+          <div class="py-7">
+            <video autoplay loop muted id="desktopVideo">
+              <source
+                src="https://saaa.dk/kea/singleusesucks.mp4"
+                class="absolute w-full h-full object-cover"
+                type=""
+              />
+            </video>
+          </div>
+        </div>
+        <div class="">
           <div>
             <h3 class="font-oswald text-2xl font-semibold pb-4">
               I Tråd Med Verden - 2024
             </h3>
             <p class="text-base leading-8 pb-4">
               Dette projekt handlede om at udvikle en webfeature og indhold til
-              sociale medier for I Tråd Med Verden. Her lød opgaven på at skabe
-              og øge engagement og konvertering af private donerer og/eller
-              virksomheder. Målgruppen var kvinder i alderen 25-45 år, bosat i
-              Københavnsområdet, som værdsætter tekstilbæredygtighed, social
-              bæredygtighed og en succeshistorie.
+              sociale medier for I Tråd Med Verden. Opgaven var at skabe og øge
+              engagement og konvertering af private donerer og/eller
+              virksomheder.
             </p>
             <p class="text-base leading-8">
-              I denne opgave bidrog jeg til kodning af webfeaturen, produktion
-              af hero video, lavede ikoner i Illustrator, samt udvikling af
-              designet for webfeaturen.
+              I dette projekt bidrog jeg til kodning af webfeaturen, produktion
+              af hero video, lavet ikoner i Illustrator, prototyping, samt
+              udvikling af designet for webfeaturen.
             </p>
           </div>
           <div class="py-7">
@@ -99,7 +109,31 @@ import toolbox from "../images/toolbox.svg";
             </video>
           </div>
         </div>
-        <div class="px-10">
+        <div class="">
+          <h3 class="font-oswald text-2xl font-semibold pb-4">
+            Eksamensprojekt - 2024
+          </h3>
+          <p class="text-base leading-8 pb-4">
+            I dette projekt lavede vi et redesign for pladetrykkeriet RPM
+            Records. Vores formål med redesignet var at optimere salget hos RPM
+            Records, samt at hjælpe med at skabe en stærkere brand-identitet.
+          </p>
+          <p class="text-base leading-8 pb-4">
+            Jeg har til dette projekt udviklet designet for vores redesign,
+            produceret hero video, prototyping, lavet illustrationer i
+            Illustrator.
+          </p>
+          <div class="py-7">
+            <video autoplay loop muted id="desktopVideo">
+              <source
+                src="https://saaa.dk/kea/rpm.mp4"
+                class="absolute w-full h-full object-cover"
+                type=""
+              />
+            </video>
+          </div>
+        </div>
+        <div class="">
           <h3 class="font-oswald text-2xl font-semibold pb-4">
             Animation - 2023
           </h3>
@@ -109,9 +143,9 @@ import toolbox from "../images/toolbox.svg";
             kodede det.
           </p>
           <p class="text-base leading-8 pb-4">
-            Jeg har til denne opgave brugt Adobe Illustrator til at lave
+            Jeg har til dette projekt brugt Adobe Illustrator til at lave
             grafikken i spillet, f.eks. baggrunde, spilelementer, karakter m.m.
-            Til at kode spillet har jeg brugt Javascript i VS Code.
+            Til at kode spillet har jeg brugt CSS og Javascript i VS Code.
           </p>
           <div class="py-7">
             <video autoplay loop muted id="desktopVideo">
@@ -145,6 +179,19 @@ import toolbox from "../images/toolbox.svg";
             />
           </div>
         </div>
+      </div>
+      <div class="bg-gron rounded-lg py-7 px-10 mb-8">
+        <h2 class="font-oswald text-4xl font-semibold pb-4">
+          Jeg vil gerne arbejde med...
+        </h2>
+        <p class="text-base leading-8">
+          Jeg er åben for alt, der involverer multimediedesign, men jeg er især
+          interesseret i at arbejde med <span class="font-semibold"
+            >UX/UI design, grafisk design og at være med i processen fra idé til
+            færdigt produkt</span
+          >. Det er områder, hvor jeg ønsker at udvikle mine kompetencer, så jeg
+          på sigt kan mestre dem.
+        </p>
       </div>
     </div>
   </section>

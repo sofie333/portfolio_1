@@ -15,12 +15,14 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{Astro.props.title}</title>
   </head>
-  <body class="mx-auto container pt-32 bg-lilla lg:grid grid-cols-2 gap-16">
+  <body
+    class="mx-6 container overflow-auto pt-32 bg-lilla lg:mx-auto lg:grid grid-cols-2 gap-16"
+  >
     <header>
       <Header />
     </header>
 
-    <main class="mx-auto container pt-2">
+    <main class="container pt-2">
       <slot />
     </main>
 
